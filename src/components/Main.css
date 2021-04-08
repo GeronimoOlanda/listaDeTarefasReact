@@ -47,6 +47,8 @@
   align-items: center;
   justify-content: space-between;
   transition: 0.1s ease all;
+  padding: 14px;
+  border-radius: 50px;
 }
 .tarefas li:hover{
  background-color: #51c5de;
@@ -69,4 +71,9 @@
 .tarefas li .delete{
   cursor: pointer;
   transition: 0.1s ease all;
+}
+.tarefas li span
+{
+  display: flex;
+  align-items: center;
 }
