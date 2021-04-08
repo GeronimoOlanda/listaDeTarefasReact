@@ -24,5 +24,6 @@ module.exports = {
     'react/state-in-constructor': 'off',
     'max-len': 'off',
     'no-console': 'off',
+    'react/sort-comp': 'off',
   },
 };

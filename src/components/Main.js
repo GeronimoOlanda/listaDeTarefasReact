@@ -12,6 +12,20 @@ export default class Main extends Component {
     tarefas: [],
   };
 
+  // vai ser executado uma vez assim que o componente for montado
+  componentDidMount() {
+    const tarefas = JSON.parse(localStorage.getItem('tarefas'));// pegando as tarefas do localstorage
+    if (!tarefas) return;
+    this.setState({ tarefas });
+  }
+
+  // utilizado para salvar no localstorage
+  componentDidUpdate(prevProps, prevState) {
+    const { tarefas } = this.state;
+    if (tarefas === prevState.tarefas) return;
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+  }
+
   // funcao criada para o submit
   handleSubmit = (e) => {
     e.preventDefault(); // previnindo o envio ao clicar no submit
