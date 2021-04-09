@@ -25,5 +25,7 @@ module.exports = {
     'max-len': 'off',
     'no-console': 'off',
     'react/sort-comp': 'off',
+    'react/prop-types': 'off',
+    'react/no-typos': 'off',
   },
 };
